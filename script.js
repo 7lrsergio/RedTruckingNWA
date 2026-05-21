@@ -98,7 +98,60 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(el => {
         animationObserver.observe(el);
     });
-    
+
+    // ========================================
+    // Reveal Observer (.reveal class — How It Works & Payment sections)
+    // ========================================
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ========================================
+    // Scramble Number Effect (.scramble-num — step numbers 01 / 02 / 03)
+    // ========================================
+    const DIGITS = '0123456789';
+
+    function scrambleNum(el, finalStr) {
+        const len = finalStr.length;
+        let frame = 0;
+        const total = 20;
+        const iv = setInterval(() => {
+            frame++;
+            let out = '';
+            for (let i = 0; i < len; i++) {
+                if (/[^0-9]/.test(finalStr[i])) {
+                    out += finalStr[i];
+                } else if (frame / total > (i / len) * 0.75 + 0.25) {
+                    out += finalStr[i];
+                } else {
+                    out += DIGITS[Math.floor(Math.random() * 10)];
+                }
+            }
+            el.textContent = out;
+            if (frame >= total) { el.textContent = finalStr; clearInterval(iv); }
+        }, 48);
+    }
+
+    const scrambleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                scrambleNum(entry.target, entry.target.dataset.final || entry.target.textContent);
+                scrambleObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.6 });
+
+    document.querySelectorAll('.scramble-num').forEach(el => scrambleObserver.observe(el));
+
     // ========================================
     // Counter Animation
     // ========================================

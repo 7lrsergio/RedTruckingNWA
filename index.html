@@ -210,38 +210,62 @@
         </div>
     </section>
 
-    <!-- Payment Section -->
-    <section class="payment" id="payment">
+     <!-- HOW IT WORKS -->
+     <section class="how" id="how" aria-label="How it works">
         <div class="container">
-            <div class="payment-content animate-on-scroll">
-                <h2 class="section-title" data-en="PAYMENT OPTIONS" data-es="OPCIONES DE PAGO">PAYMENT OPTIONS</h2>
-                <p class="payment-text" data-en="We accept multiple payment methods for your convenience" data-es="Aceptamos múltiples métodos de pago para su conveniencia">We accept multiple payment methods for your convenience</p>
-                <div class="payment-methods">
-                    <div class="payment-card">
-                        <i class="fab fa-cc-visa"></i>
-                        <span>Visa</span>
-                    </div>
-                    <div class="payment-card">
-                        <i class="fab fa-cc-mastercard"></i>
-                        <span>Mastercard</span>
-                    </div>
-                    <div class="payment-card">
-                        <i class="fab fa-cc-amex"></i>
-                        <span>Amex</span>
-                    </div>
-                    <div class="payment-card">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <span data-en="Cash" data-es="Efectivo">Cash</span>
-                    </div>
-                    <div class="payment-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <span data-en="Mobile Pay" data-es="Pago Móvil">Mobile Pay</span>
-                    </div>
-                </div>
-                <p class="payment-note" data-en="* Fleet accounts and invoicing available" data-es="* Cuentas de flota y facturación disponibles">* Fleet accounts and invoicing available</p>
+          <div class="section-header reveal">
+            <span class="section-tag" data-en="SIMPLE PROCESS" data-es="PROCESO SIMPLE">SIMPLE PROCESS</span>
+            <h2 class="section-title" data-en="HOW IT WORKS" data-es="CÓMO FUNCIONA">HOW IT WORKS</h2>
+          </div>
+          <div class="how__steps">
+            <div class="how__step reveal" style="--delay:0.05s">
+              <div class="how__step-num mono scramble-num" data-final="01">01</div>
+              <h3 class="how__step-title" data-en="Call Us" data-es="Llámanos">Call Us</h3>
+              <p class="how__step-desc" data-en="One call connects you to our team, day or night." data-es="Una llamada te conecta con nuestro equipo, de día o de noche.">One call connects you to our team, day or night.</p>
             </div>
+            <div class="how__connector" aria-hidden="true"></div>
+            <div class="how__step reveal" style="--delay:0.15s">
+              <div class="how__step-num mono scramble-num" data-final="02">02</div>
+              <h3 class="how__step-title" data-en="We Come To You" data-es="Vamos a Ti">We Come To You</h3>
+              <p class="how__step-desc" data-en="A certified mechanic heads to your location immediately." data-es="Un mecánico certificado se dirige a tu ubicación de inmediato.">A certified mechanic heads to your location immediately.</p>
+            </div>
+            <div class="how__connector" aria-hidden="true"></div>
+            <div class="how__step reveal" style="--delay:0.25s">
+              <div class="how__step-num mono scramble-num" data-final="03">03</div>
+              <h3 class="how__step-title" data-en="Back On The Road" data-es="De Vuelta al Camino">Back On The Road</h3>
+              <p class="how__step-desc" data-en="We handle the repair on-site and get you moving fast." data-es="Realizamos la reparación en el sitio y te ponemos en marcha rápido.">We handle the repair on-site and get you moving fast.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+  
+      <!-- PAYMENT -->
+      <section class="payment" id="payment" aria-label="Payment methods">
+        <div class="container">
+          <div class="payment__inner reveal">
+            <h2 class="payment__title" data-en="WE MAKE IT EASY TO PAY." data-es="FACILITAMOS EL PAGO.">WE MAKE IT EASY TO PAY.</h2>
+            <div class="payment__methods" aria-label="Accepted payment methods">
+              <div class="payment__method">
+                <svg class="payment__icon" viewBox="0 0 48 32" aria-label="Visa"><rect width="48" height="32" rx="4" fill="#1A1F71"/><text x="8" y="22" font-family="Arial" font-weight="900" font-size="14" fill="white" letter-spacing="-0.5">VISA</text></svg>
+              </div>
+              <div class="payment__method">
+                <svg class="payment__icon" viewBox="0 0 48 32" aria-label="Mastercard"><rect width="48" height="32" rx="4" fill="#252525"/><circle cx="18" cy="16" r="10" fill="#EB001B" opacity="0.9"/><circle cx="30" cy="16" r="10" fill="#F79E1B" opacity="0.9"/><path d="M24 8.3a10 10 0 0 1 0 15.4A10 10 0 0 1 24 8.3z" fill="#FF5F00"/></svg>
+              </div>
+              <div class="payment__method">
+                <svg class="payment__icon" viewBox="0 0 48 32" aria-label="American Express"><rect width="48" height="32" rx="4" fill="#007BC1"/><text x="5" y="14" font-family="Arial" font-weight="900" font-size="7" fill="white">AMERICAN</text><text x="5" y="23" font-family="Arial" font-weight="900" font-size="7" fill="white">EXPRESS</text></svg>
+              </div>
+              <div class="payment__method">
+                <svg class="payment__icon" viewBox="0 0 48 32" aria-label="Cash"><rect width="48" height="32" rx="4" fill="#1a7a1a"/><text x="9" y="21" font-family="Arial" font-weight="900" font-size="13" fill="white">CASH</text></svg>
+              </div>
+              <div class="payment__method">
+                <svg class="payment__icon" viewBox="0 0 48 32" aria-label="Mobile Pay"><rect width="48" height="32" rx="4" fill="#333"/><text x="5" y="14" font-family="Arial" font-weight="700" font-size="7" fill="#4FC3F7">MOBILE</text><text x="9" y="23" font-family="Arial" font-weight="700" font-size="7" fill="#4FC3F7">PAY</text></svg>
+              </div>
+            </div>
+            <p class="payment__note" data-en="Fleet accounts and invoicing available." data-es="Cuentas de flota y facturación disponibles.">Fleet accounts and invoicing available.</p>
+          </div>
+        </div>
+      </section>
+  
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
