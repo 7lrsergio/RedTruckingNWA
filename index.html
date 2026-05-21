@@ -30,11 +30,17 @@
                 <span class="logo-white">TRUCKING</span>
             </a>
             <div class="nav-right">
-                <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
-                    <span class="lang-en active">EN</span>
-                    <span class="lang-divider">/</span>
-                    <span class="lang-es">ES</span>
-                </button>
+                <div class="lang-bubble-wrap">
+                    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                        <span class="lang-en active">EN</span>
+                        <span class="lang-divider">/</span>
+                        <span class="lang-es">ES</span>
+                    </button>
+                    <div class="lang-bubble" id="langBubble" aria-hidden="true">
+                     
+                        <span class="lang-bubble__text">Hablamos Español</span>
+                    </div>
+                </div>
                 <a href="tel:+14793063492" class="nav-call-btn">
                     <i class="fas fa-phone"></i>
                     <span data-en="CALL NOW" data-es="LLAMAR">(479) 306-3492</span>
@@ -339,7 +345,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> SLANDS <span data-en="All Rights Reserved." data-es="Todos los Derechos Reservados.">All Rights Reserved.</span></p>
+                <a href="https://www.slandsnwa.com" target="_blank" rel="noopener">&copy; <span id="currentYear"></span> SLANDS <span data-en="All Rights Reserved." data-es="Todos los Derechos Reservados.">All Rights Reserved.</span></a>
             </div>
         </div>
     </footer>

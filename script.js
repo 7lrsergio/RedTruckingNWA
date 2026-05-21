@@ -503,6 +503,40 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========================================
+    // "Hablamos Español" bubble notification
+    // ========================================
+    const langBubble = document.getElementById('langBubble');
+
+    if (langBubble) {
+        let bubbleTimer;
+
+        const showBubble = () => {
+            langBubble.classList.remove('hide');
+            langBubble.classList.add('show');
+            bubbleTimer = setTimeout(hideBubble, 3800);
+        };
+
+        const hideBubble = () => {
+            clearTimeout(bubbleTimer);
+            langBubble.classList.remove('show');
+            langBubble.classList.add('hide');
+        };
+
+        // Pop in 1.8 s after load so the hero has settled
+        setTimeout(showBubble, 1800);
+
+        // Dismiss immediately when the user clicks the toggle
+        document.getElementById('langToggle').addEventListener('click', hideBubble, { once: true });
+
+        // Dismiss on any click outside the bubble
+        document.addEventListener('click', (e) => {
+            if (!langBubble.contains(e.target) && e.target.id !== 'langToggle') {
+                hideBubble();
+            }
+        });
+    }
+
+    // ========================================
     // Console Easter Egg
     // ========================================
     console.log('%c RED TRUCKING ', 'background: #E60000; color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 4px;');
